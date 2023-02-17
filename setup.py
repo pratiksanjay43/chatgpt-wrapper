@@ -14,7 +14,7 @@ setup(
     description="A simple Python class for interacting with OpenAI's chatGPT using Playwright",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/mmabrouk/chatgpt-wrapper",
+    url="https://github.com/pratiksanjay43/chatgpt-wrapper",
     packages=find_packages(),
     install_requires=install_requirement,
     classifiers=[
