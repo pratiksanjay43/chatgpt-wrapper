@@ -22,14 +22,14 @@ class ChatGPT:
     eof_div_id = "chatgpt-wrapper-conversation-stream-data-eof"
     session_div_id = "chatgpt-wrapper-session-data"
 
-    def __init__(self, headless: bool = True, browser="chrome", timeout=60, proxy: Optional[ProxySettings] = None):
+    def __init__(self, headless: bool = True, browser="chromium", timeout=60, proxy: Optional[ProxySettings] = None):
         self.play = sync_playwright().start()
 
         try:
             playbrowser = getattr(self.play, browser)
         except Exception:
             print(f"Browser {browser} is invalid, falling back on firefox")
-            playbrowser = self.play.chrome
+            playbrowser = self.play.chromium
 
         self.browser = playbrowser.launch_persistent_context(
             user_data_dir="/tmp/playwright",
