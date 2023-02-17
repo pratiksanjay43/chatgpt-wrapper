@@ -35,7 +35,7 @@ def main():
         "-b",
         "--browser",
         action="store",
-        help="set preferred browser; 'firefox' 'chromium' or 'webkit'",
+        help="set preferred browser; 'chromium' ,'firefox' or 'webkit'",
     )
     args = parser.parse_args()
     install_mode = len(args.params) == 1 and args.params[0] == "install"
