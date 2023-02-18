@@ -49,6 +49,7 @@ class ChatGPT:
 
     def _start_browser(self):
         self.page.goto("https://chat.openai.com/")
+        sleep(20)
 
     def _cleanup(self):
         self.browser.close()
